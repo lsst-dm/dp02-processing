@@ -3,7 +3,7 @@ includeConfigs:
 
 project: dp02
 campaign: w_2021_40/PREOPS-728
-pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step2"
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step3"
 
 payload:
   payloadName: 2.2i/runs/test-tract4431

@@ -2,7 +2,7 @@ includeConfigs:
 - ${CTRL_BPS_DIR}/config/bps_idf.yaml
 
 project: dp02
-campaign: w_2021_40/PREOPS-???
+campaign: w_2021_40/PREOPS-728
 pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step1"
 
 payload:
