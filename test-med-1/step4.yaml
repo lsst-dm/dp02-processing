@@ -4,7 +4,9 @@ includeConfigs:
 
 project: dp02
 campaign: w_2021_40/PREOPS-707
-pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step4"
+#pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step4"
+pipelineYaml: "$OBS_LSST_DIR/pipelines/imsim/DRP.yaml#forcedPhotCcd,forcedPhotDiffim,getTemplate,imageDifference,transformDiaSourceCat"
+
 
 payload:
   payloadName: 2.2i/runs/test-med-1
