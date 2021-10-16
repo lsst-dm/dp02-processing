@@ -1,5 +1,6 @@
 includeConfigs:
 - ${CTRL_BPS_DIR}/config/bps_idf.yaml
+- requestMemory.yaml
 
 project: dp02
 campaign: w_2021_40/PREOPS-728
