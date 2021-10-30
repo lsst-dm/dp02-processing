@@ -16,3 +16,16 @@ payload:
   outputRun: "{output}/{timestamp}"
 
 createQuantumGraph: '${CTRL_MPEXEC_DIR}/bin/pipetask {qgraphPreCmdOpts} qgraph -b {butlerConfig} -i {inCollection} -o {output} --output-run {outputRun} -p {pipelineYaml} -q {qgraphFile} -d "{dataQuery}" {extraQgraphOptions} --skip-existing   --skip-existing-in 2.2i/runs/test-tract4431/w_2021_40/PREOPS-728'
+
+
+
+pipetask:
+  pipetaskInit:
+#    # This is different from the ctrl_bps default only in the addition of {fileDistributionEndPoint}
+    runQuantumCommand: "${CTRL_MPEXEC_DIR}/bin/pipetask {initPreCmdOpts} run -b {butlerConfig} -i {inCollection} -o {output} --output-run {outCollection} --qgraph {fileDistributionEndPoint}/{qgraphFile} --qgraph-id {qgraphId} --qgraph-node-id {qgraphNodeId} --clobber-outputs --init-only --extend-run {extraInitOptions} --skip-existing   --skip-existing-in 2.2i/runs/test-tract4431/w_2021_40/PREOPS-728"
+  forcedPhotCoadd:
+    queue: "DOMA_LSST_GOOGLE_TEST_HIMEM_NON_PREEMPT"
+  #matchCatalogsPatchMultiBand:
+  #  queue: "DOMA_LSST_GOOGLE_TEST_HIMEM_NON_PREEMPT"
+  measure:
+    queue: "DOMA_LSST_GOOGLE_TEST_HIMEM_NON_PREEMPT"

@@ -16,7 +16,7 @@ pipetask:
   imageDifference:
     requestMemory: 4096
   matchCatalogsPatchMultiBand:
-    requestMemory: 8196
+    requestMemory: 120000
   matchCatalogsTract:
     requestMemory: 120000
   wPerp:
