@@ -1,0 +1,15 @@
+includeConfigs:
+- ${CTRL_BPS_DIR}/config/bps_idf.yaml
+- requestMemory.yaml
+
+project: dp02
+campaign: v23_0_0_rc2/PREOPS-863
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step1"
+
+payload:
+  payloadName: 2.2i/runs/test-med-1
+  output: "{payloadName}/{campaign}"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
+  inCollection: "2.2i/defaults/test-med-1"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract in (3828, 3829)"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_0_rc2"
