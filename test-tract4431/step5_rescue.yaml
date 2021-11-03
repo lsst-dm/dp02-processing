@@ -1,0 +1,18 @@
+includeConfigs:
+- ${CTRL_BPS_DIR}/config/bps_idf.yaml
+- requestMemory.yaml
+
+project: dp02
+campaign: v23_0_0_rc2/PREOPS-728
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step5"
+
+payload:
+  payloadName: 2.2i/runs/test-tract4431
+  output: "{payloadName}/{campaign}"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
+  inCollection: "2.2i/runs/test-tract4431/w_2021_40/PREOPS-728"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract in (4431)"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_0_rc2"
+  outputRun: "{output}/{timestamp}"
+
+createQuantumGraph: '${CTRL_MPEXEC_DIR}/bin/pipetask {qgraphPreCmdOpts} qgraph -b {butlerConfig} -i {inCollection} -o {output} --output-run {outputRun} -p {pipelineYaml} -q {qgraphFile} -d "{dataQuery}" {extraQgraphOptions} --clobber-outputs --skip-existing   --skip-existing-in 2.2i/runs/test-tract4431/v23_0_0_rc2/PREOPS-728'

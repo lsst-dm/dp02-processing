@@ -20,10 +20,14 @@ pipetask:
   matchCatalogsTract:
     requestMemory: 120000
   wPerp:
-    requestMemory: 32000
+    requestMemory: 120000
   TE1:
-    requestMemory: 16384
+    requestMemory: 46000
   TE2:
-    requestMemory: 16384
+    requestMemory: 46000
   consolidateObjectTable:
     requestMemory: 4096
+  consolidateForcedSourceTable:
+    requestMemory: 120000
+  consolidateForcedSourceOnDiaObjectTable:
+    requestMemory: 18000
