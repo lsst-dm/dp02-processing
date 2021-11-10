@@ -1,0 +1,15 @@
+includeConfigs:
+- ${CTRL_BPS_DIR}/config/bps_idf.yaml
+
+project: dev
+campaign: test 
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step1"
+
+payload:
+  payloadName: 2.2i/runs/DP0.2
+  output: "u/{operator}/{campaign}/{payloadName}/d_2021_11_08"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
+  inCollection: "2.2i/defaults/DP0.2"
+  # This should not contrain tract
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and exposure < 3000"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-d_2021_11_08"
