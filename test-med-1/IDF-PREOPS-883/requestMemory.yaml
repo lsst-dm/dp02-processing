@@ -1,0 +1,27 @@
+pipetask:
+  makeWarp:
+    requestMemory: 4096
+  assembleCoadd:
+    requestMemory: 4096
+  deblend:
+    requestMemory: 16384
+  measure:
+    requestMemory: 16384
+  mergeMeasurements:
+    requestMemory: 16384
+  forcedPhotCoadd: 
+    requestMemory: 4096
+  writeObjectTable:
+    requestMemory: 16384
+  imageDifference:
+    requestMemory: 4096
+  matchCatalogsPatchMultiBand:
+    requestMemory: 8196
+  matchCatalogsTract:
+    requestMemory: 32000
+  wPerp:
+    requestMemory: 32000
+  TE1:
+    requestMemory: 16384
+  TE2:
+    requestMemory: 16384
