@@ -15,4 +15,5 @@ payload:
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_0_rc2"
   outputRun: "{output}/{timestamp}"
 
+# Note: should have just used extraQgraphOption
 createQuantumGraph: '${CTRL_MPEXEC_DIR}/bin/pipetask {qgraphPreCmdOpts} qgraph -b {butlerConfig} -i {inCollection} -o {output} --output-run {outputRun} -p {pipelineYaml} -q {qgraphFile} -d "{dataQuery}" {extraQgraphOptions} --clobber-outputs --skip-existing   --skip-existing-in 2.2i/runs/test-tract4431/v23_0_0_rc2/PREOPS-728'
