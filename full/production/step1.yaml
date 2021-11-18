@@ -2,7 +2,7 @@ includeConfigs:
 - ${CTRL_BPS_DIR}/config/bps_idf.yaml
 
 project: dp02
-campaign: v23.0/PREOPS-???
+campaign: v23_0_0/PREOPS-???
 pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step1"
 
 payload:
@@ -12,4 +12,4 @@ payload:
   inCollection: "2.2i/defaults/DP0.2"
   # This should not contrain tract
   dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and exposure < ???"
-  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2021_40"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_0"
