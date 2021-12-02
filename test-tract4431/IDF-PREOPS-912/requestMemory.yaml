@@ -13,6 +13,10 @@ pipetask:
     requestMemory: 4096
   writeObjectTable:
     requestMemory: 16384
+  matchCatalogsPatch:
+    requestMemory: 4096
+  modelPhotRepGal4:
+    requestMemory: 4096
   imageDifference:
     requestMemory: 4096
   matchCatalogsPatchMultiBand:
