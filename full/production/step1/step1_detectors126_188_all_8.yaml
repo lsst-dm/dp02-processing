@@ -12,7 +12,7 @@ payload:
   output: "{payloadName}/{campaign}"
   butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
   inCollection: "2.2i/defaults/DP0.2"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and (detector>=0 and detector<=62) and exposure >=1472 and exposure <= 206020"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and (detector>=126 and detector<=188) and exposure >=721711 and exposure <= 903692"
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_0_rc5"
 
 saveClusteredQgraph: True
