@@ -1,0 +1,21 @@
+includeConfigs:
+- ${CTRL_BPS_DIR}/config/bps_idf.yaml
+- requestMemory.yaml
+- clustering.yaml
+
+project: dp02
+campaign: v23_0_0_rc5/PREOPS-905
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step1"
+
+payload:
+  payloadName: 2.2i/runs/DP0.2
+  output: "{payloadName}/{campaign}"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
+  inCollection: "2.2i/defaults/DP0.2"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and (detector>=95 and detector<=188) and exposure >=1189982 and exposure <= 1222548"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_0_rc5"
+
+saveClusteredQgraph: True
+saveGenericWorkflow: True
+
+extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/DP0.2/v23_0_0_rc5/PREOPS-905"
