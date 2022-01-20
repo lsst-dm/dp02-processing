@@ -1,0 +1,35 @@
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
+cluster:
+    visit_detector_1:
+        pipetasks: isr,characterizeImage,calibrate,writeSourceTable,transformSourceTable
+        dimensions: visit,detector
+        equalDimensions: visit:exposure
+    visit_step2_1:
+        pipetasks: consolidateSourceTable,consolidateVisitSummary,nsrcMeasVisit,TE3,TE4
+        dimensions: visit
+    patch_coaddition:
+        pipetasks: assembleCoadd,templateGen,detection
+        dimensions: tract,patch,band
+        request_memory: 8096
+    patch_detect_deblend:
+        pipetasks: mergeDetections,deblend
+        dimensions: tract,patch
+    patch_postprocess:
+        pipetasks: writeObjectTable,transformObjectTable
+        dimensions: tract,patch
+    diffim:
+        pipetasks: getTemplate,imageDifference,transformDiaSourceCat
+        dimensions: visit,detector,skymap
+    association:
+        pipetasks: drpAssociation,drpDiaCalculation
+        dimensions: tract,patch
+    forced_phot_detector:
+        # All of these tasks _can_ be run together, but forcedPhotCcd (and to
+        # a lesser extent, forcedPhotDiffim and writeForcedSourceTable) may be
+        # unblocked much earlier; operators may want to split this cluster up
+        # on that basis.
+        pipetasks: forcedPhotCcd,forcedPhotDiffim,forcedPhotDiffOnDiaObjects,forcedPhotCcdOnDiaObjects,writeForcedSourceTable
+        dimensions: tract,visit,detector
+    property_maps:
+        pipetasks: healSparsePropertyMaps
+        dimensions: tract,band
