@@ -1,0 +1,14 @@
+includeConfigs:
+- ${CTRL_BPS_DIR}/config/bps_idf.yaml
+
+project: dp02
+campaign: v23_0_0_rc5/PREOPS-910
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step1"
+
+payload:
+  payloadName: 2.2i/runs/test_ci_imsim
+  output: "u/{operator}/{payloadName}/{campaign}"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
+  inCollection: "2.2i/defaults/ci_imsim"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and visit=226983"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_0_rc5"
