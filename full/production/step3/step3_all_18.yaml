@@ -12,7 +12,7 @@ payload:
   output: "{payloadName}/{campaign}"
   butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
   inCollection: "2.2i/runs/DP0.2/v23_0_0_rc5/PREOPS-905"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=4637 and tract<=4643"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=4029 and tract<=4033"
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_1_rc2"
 
 saveClusteredQgraph: True
