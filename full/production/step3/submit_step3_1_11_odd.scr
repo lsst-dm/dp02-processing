@@ -1,0 +1,23 @@
+bps submit step3_all_1.yaml 2>&1 | tee step3_all_1.log
+prodstat update-issue step3_all_1.yaml PREOPS-905 DRP0
+sleep 12h
+#
+bps submit step3_all_3.yaml 2>&1 | tee step3_all_3.log
+prodstat update-issue step3_all_3.yaml PREOPS-905 DRP0
+sleep 12h
+#
+bps submit step3_all_5.yaml 2>&1 | tee step3_all_5.log
+prodstat update-issue step3_all_5.yaml PREOPS-905 DRP0
+sleep 12h
+#
+bps submit step3_all_7.yaml 2>&1 | tee step3_all_7.log
+prodstat update-issue step3_all_7.yaml PREOPS-905 DRP0
+sleep 12h
+#
+bps submit step3_all_9.yaml 2>&1 | tee step3_all_9.log
+prodstat update-issue step3_all_9.yaml PREOPS-905 DRP0
+sleep 12h
+#
+bps submit step3_all_11.yaml 2>&1 | tee step3_all_11.log
+prodstat update-issue step3_all_11.yaml PREOPS-905 DRP0
+#
