@@ -4,7 +4,7 @@ includeConfigs:
 - clustering_step3.yaml
 
 project: dp02
-campaign: v23_0_1_rc3/PREOPS-905/step3_24
+campaign: v23_0_1/PREOPS-905/step3_24
 pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step3"
 
 payload:
