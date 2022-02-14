@@ -14,7 +14,7 @@ cluster:
     patch_detect_deblend:
         pipetasks: mergeDetections,deblend
         dimensions: tract,patch
-        request_memory: 32768
+        request_memory: 16384
     patch_postprocess:
         pipetasks: writeObjectTable,transformObjectTable
         dimensions: tract,patch
