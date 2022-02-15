@@ -1,0 +1,20 @@
+#
+# run manual merge for step3_all_2
+cd submit_directory_for_step3_all_2
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_2_20220211T220331Z 2>&1 | tee final_job_step3_all_2.log
+#
+# run manual merge for step3_all_4
+cd submit_directory_for_step3_all_4
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_4_20220212T124528Z 2>&1 | tee final_job_step3_all_4.log
+#
+# run manual merge for step3_all_6
+cd submit_directory_for_step3_all_6
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_6_20220213T033421Z 2>&1 | tee final_job_step3_all_6.log
+#
+# run manual merge for step3_all_8
+cd submit_directory_for_step3_all_8
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_8_20220213T180553Z 2>&1 | tee final_job_step3_all_8.log
+#
+# run manual merge for step3_all_10
+cd submit_directory_for_step3_all_10
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_10_20220214T080917Z 2>&1 | tee final_job_step3_all_10.log
