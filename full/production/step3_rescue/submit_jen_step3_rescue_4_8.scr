@@ -1,0 +1,8 @@
+sleep 1h
+#
+bps submit step3_rescue_all_4.yaml 2>&1 | tee step3_rescue_all_4.log
+prodstat update-issue step3_rescue_all_4.yaml PREOPS-905 DRP0
+sleep 10h
+#
+bps submit step3_rescue_all_8.yaml 2>&1 | tee step3_rescue_all_8.log
+prodstat update-issue step3_rescue_all_8.yaml PREOPS-905 DRP0
