@@ -1,0 +1,20 @@
+#
+# run manual merge for step3_all_2
+cd /home/jenimal/DATA/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_2/20220211T220331Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_2_20220211T220331Z 2>&1 | tee final_job_step3_all_2.log
+#
+# run manual merge for step3_all_4
+cd /home/jenimal/DATA/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_4/20220212T124528Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_4_20220212T124528Z 2>&1 | tee final_job_step3_all_4.log
+#
+# run manual merge for step3_all_6
+cd /home/jenimal/DATA/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_6/20220213T033421Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_6_20220213T033421Z 2>&1 | tee final_job_step3_all_6.log
+#
+# run manual merge for step3_all_8
+cd /home/jenimal/DATA/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_8/20220213T180553Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_8_20220213T180553Z 2>&1 | tee final_job_step3_all_8.log
+#
+# run manual merge for step3_all_10
+cd /home/jenimal/DATA/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_10/20220214T080917Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_10_20220214T080917Z 2>&1 | tee final_job_step3_all_10.log

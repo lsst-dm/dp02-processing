@@ -1,0 +1,9 @@
+#
+# run manual merge for step3_all_1
+cd /home/hlin730/DATA/dp0.2/PREOPS-905/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_1/20220211T205638Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_1_20220211T205638Z 2>&1 | tee final_job_step3_all_1.log
+#
+# run manual merge for step3_all_3
+cd /home/hlin730/DATA/dp0.2/PREOPS-905/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_3/20220212T114441Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_3_20220212T114441Z 2>&1 | tee final_job_step3_all_3.log
+
