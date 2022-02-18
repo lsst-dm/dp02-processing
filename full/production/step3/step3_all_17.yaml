@@ -10,7 +10,7 @@ pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step3"
 payload:
   payloadName: 2.2i/runs/DP0.2
   output: "{payloadName}/{campaign}"
-  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external.yaml
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external-large-cache.yaml
   inCollection: "2.2i/runs/DP0.2/v23_0_0_rc5/PREOPS-905"
   dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=4024 and tract<=4028"
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_1_rc3"
