@@ -1,0 +1,12 @@
+#
+# run manual merge for step3_rescue_all_2
+cd /home/hlin730/DATA/dp0.2/PREOPS-905/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_2/20220216T185927Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_2_20220216T185927Z 2>&1 | tee final_job_step3_rescue_all_2.log
+#
+# run manual merge for step3_rescue_all_6
+cd /home/hlin730/DATA/dp0.2/PREOPS-905/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_6/20220217T065519Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_6_20220217T065519Z 2>&1 | tee final_job_step3_rescue_all_6.log
+#
+# run manual merge for step3_rescue_all_10
+cd /home/hlin730/DATA/dp0.2/PREOPS-905/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_10/20220217T184646Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_10_20220217T184646Z 2>&1 | tee final_job_step3_rescue_all_10.log
