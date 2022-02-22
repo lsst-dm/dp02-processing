@@ -1,0 +1,8 @@
+#
+# run manual merge for step3_rescue_all_4
+cd /home/jenimal/DATA/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_4/20220216T202155Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_4_20220216T202155Z 2>&1 | tee final_job_step3_rescue_all_4.log
+#
+# run manual merge for step3_rescue_all_8
+cd /home/jenimal/DATA/step3/submit/2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_4/20220217T083052Z
+./final_job.bash s3://butler-us-central1-panda-dev/dc2/butler-external.yaml EXEC_REPO-2.2i_runs_DP0.2_v23_0_1_PREOPS-905_step3_4_20220217T083052Z 2>&1 | tee final_job_step3_rescue_all_4.log
