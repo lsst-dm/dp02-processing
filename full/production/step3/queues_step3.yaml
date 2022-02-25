@@ -1,0 +1,39 @@
+pipetask:
+  pipetaskInit:
+    queue: DOMA_LSST_GOOGLE_TEST
+  makeWarp:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  assembleCoadd:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  detection:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  mergeDetections:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  deblend:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  measure:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  mergeMeasurements:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  transformObjectTable:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  writeObjectTable:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  consolidateObjectTable:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  matchObjectToTruth:
+    queue: DOMA_LSST_GOOGLE_TEST
+  healSparsePropertyMaps:
+    queue: DOMA_LSST_GOOGLE_TEST
+  selectGoodSeeingVisits:
+    queue: DOMA_LSST_GOOGLE_TEST
+  templateGen:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  matchCatalogsTract:
+    queue: DOMA_LSST_GOOGLE_TEST_EXTRA_HIMEM
+  matchCatalogsPatch:
+    queue: DOMA_LSST_GOOGLE_TEST_HIMEM
+  matchCatalogsPatchMultiBand:
+    queue: DOMA_LSST_GOOGLE_TEST_EXTRA_HIMEM
+  AB1:
+    queue: DOMA_LSST_GOOGLE_TEST
