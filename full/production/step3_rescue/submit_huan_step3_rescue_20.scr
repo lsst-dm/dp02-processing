@@ -1,0 +1,2 @@
+bps submit step3_rescue_nofaro_all_20.yaml 2>&1 | tee step3_rescue_nofaro_all_20.log
+prodstat update-issue step3_rescue_nofaro_all_20.yaml PREOPS-905 DRP0

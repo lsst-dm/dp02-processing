@@ -1,0 +1,14 @@
+bps submit step3_rescue_nofaro_all_9.yaml 2>&1 | tee step3_rescue_nofaro_all_9.log
+prodstat update-issue step3_rescue_nofaro_all_9.yaml PREOPS-905 DRP0
+#
+bps submit step3_rescue_nofaro_all_13.yaml 2>&1 | tee step3_rescue_nofaro_all_13.log
+prodstat update-issue step3_rescue_nofaro_all_13.yaml PREOPS-905 DRP0
+#
+bps submit step3_rescue_nofaro_all_15.yaml 2>&1 | tee step3_rescue_nofaro_all_15.log
+prodstat update-issue step3_rescue_nofaro_all_15.yaml PREOPS-905 DRP0
+#
+bps submit step3_rescue_nofaro_all_16.yaml 2>&1 | tee step3_rescue_nofaro_all_16.log
+prodstat update-issue step3_rescue_nofaro_all_16.yaml PREOPS-905 DRP0
+#
+bps submit step3_rescue_nofaro_all_19.yaml 2>&1 | tee step3_rescue_nofaro_all_19.log
+prodstat update-issue step3_rescue_nofaro_all_19.yaml PREOPS-905 DRP0
