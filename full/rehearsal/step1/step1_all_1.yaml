@@ -25,7 +25,7 @@ payload:
   output: "{payloadName}/{campaign}"
   butlerConfig: /sps/lsst/users/lsstprod/dp0.2-dev/butler.yaml
   inCollection: "2.2i/defaults"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and exposure >=1472 and exposure <= 213508"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and exposure >=1472 and exposure <= 190585"
 
 # Needed for Parsl plugin
 executionButler:
