@@ -1,7 +1,7 @@
 pipetask:
 # step 1
   isr:
-    requestMemory: 3072
+    requestMemory: 4096
   characterizeImage:
     requestMemory: 2048
   calibrate:
