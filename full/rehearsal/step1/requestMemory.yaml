@@ -5,7 +5,7 @@ pipetask:
   characterizeImage:
     requestMemory: 2048
   calibrate:
-    requestMemory: 2048
+    requestMemory: 4096
   writeSourceTable:
     requestMemory: 2048
   transformSourceTable:
