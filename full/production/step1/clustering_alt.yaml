@@ -1,0 +1,22 @@
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
+cluster:
+    visit_step1_isr:
+        pipetasks: isr
+        dimensions: visit
+        equalDimensions: visit:exposure
+    visit_step1_characterizeImage:
+        pipetasks: characterizeImage
+        dimensions: visit
+        equalDimensions: visit:exposure
+    visit_step1_calibrate:
+        pipetasks: calibrate
+        dimensions: visit
+        equalDimensions: visit:exposure
+    visit_step1_writeSourceTable:
+        pipetasks: writeSourceTable
+        dimensions: visit
+        equalDimensions: visit:exposure
+    visit_step1_transformSourceTable:
+        pipetasks: transformSourceTable
+        dimensions: visit
+        equalDimensions: visit:exposure
