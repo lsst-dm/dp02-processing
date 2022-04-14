@@ -3,13 +3,16 @@ pipetask:
   isr:
     requestMemory: 4096
   characterizeImage:
-    requestMemory: 2048
+#    requestMemory: 2048
+    requestMemory: 4096
   calibrate:
     requestMemory: 4096
   writeSourceTable:
-    requestMemory: 2048
+#    requestMemory: 2048
+    requestMemory: 4096
   transformSourceTable:
-    requestMemory: 2048
+#    requestMemory: 2048
+    requestMemory: 4096
 # step 2
   consolidateSourceTable:
     requestMemory: 2048
