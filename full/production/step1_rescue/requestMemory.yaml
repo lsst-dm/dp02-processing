@@ -1,18 +1,18 @@
 pipetask:
 # step 1
   isr:
-    requestMemory: 8192
+    requestMemory: 54000
   characterizeImage:
 #    requestMemory: 2048
-    requestMemory: 8192
+    requestMemory: 54000
   calibrate:
-    requestMemory: 8192
+    requestMemory: 54000
   writeSourceTable:
 #    requestMemory: 2048
-    requestMemory: 8192
+    requestMemory: 54000
   transformSourceTable:
 #    requestMemory: 2048
-    requestMemory: 8192
+    requestMemory: 54000
 # step 2
   consolidateSourceTable:
     requestMemory: 2048
