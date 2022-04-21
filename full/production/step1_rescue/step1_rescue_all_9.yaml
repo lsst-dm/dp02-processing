@@ -25,10 +25,10 @@ payload:
   output: "{payloadName}/{campaign}"
   butlerConfig: /sps/lsst/dataproducts/rubin/previews/dp0.2/butler.yaml
   inCollection: "2.2i/defaults"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and exposure >=1040759 and exposure <= 1189981 and exposure!=1145348"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and exposure >=1040759 and exposure <= 1189981 and exposure!=1145348 and exposure = 1151360"
 
 # Needed for Parsl plugin
 executionButler:
   whenCreate: "PREPARE"
 
-extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/FRDF/DP0.2/PREOPS-1145/step1_9
+extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/FRDF/DP0.2/PREOPS-1145/step1_9"

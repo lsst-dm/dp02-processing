@@ -1,0 +1,163 @@
+pipetask:
+# step 1
+  isr:
+    requestMemory: 4096
+  characterizeImage:
+#    requestMemory: 2048
+    requestMemory: 4096
+  calibrate:
+    requestMemory: 4096
+  writeSourceTable:
+#    requestMemory: 2048
+    requestMemory: 4096
+  transformSourceTable:
+#    requestMemory: 2048
+    requestMemory: 4096
+# step 2
+  consolidateSourceTable:
+    requestMemory: 2048
+  consolidateVisitSummary:
+    requestMemory: 2048
+  nsrcMeasVisit:
+    requestMemory: 2048
+  TE3:
+    requestMemory: 2048
+  TE4:
+    requestMemory: 2048
+# step 3
+  makeWarp:
+    requestMemory: 4096
+  assembleCoadd:
+    requestMemory: 4096
+  detection:
+    requestMemory: 3072
+  mergeDetections:
+    requestMemory: 2048
+  deblend:
+    requestMemory: 49152
+  measure:
+    requestMemory: 12288
+  mergeMeasurements:
+    requestMemory: 10240
+  forcedPhotCoadd: 
+    requestMemory: 6144
+  transformObjectTable:
+    requestMemory: 2048
+  writeObjectTable:
+    requestMemory: 24576
+  consolidateObjectTable:
+    requestMemory: 20480
+  matchObjectToTruth:
+    requestMemory: 6144
+  healSparsePropertyMaps:
+    requestMemory: 3072
+  selectGoodSeeingVisits:
+    requestMemory: 2048
+  templateGen:
+    requestMemory: 2048
+  matchCatalogsTract:
+    requestMemory: 170000
+  matchCatalogsPatch:
+    requestMemory: 16384
+  matchCatalogsPatchMultiBand:
+    requestMemory: 51200
+  PA1:
+    requestMemory: 16384
+  PF1_design:
+    requestMemory: 16384
+  AM1:
+    requestMemory: 16384
+  AM2:
+    requestMemory: 16384
+  AM3:
+    requestMemory: 16384
+  AD1_design:
+    requestMemory: 16384
+  AD2_design:
+    requestMemory: 16384
+  AD3_design:
+    requestMemory: 16384
+  AF1_design:
+    requestMemory: 16384
+  AF2_design:
+    requestMemory: 16384
+  AF3_design:
+    requestMemory: 16384
+  AB1:
+    requestMemory: 2048
+  modelPhotRepGal1:
+    requestMemory: 16384
+  modelPhotRepGal2:
+    requestMemory: 16384
+  modelPhotRepGal3:
+    requestMemory: 16384
+  modelPhotRepGal4:
+    requestMemory: 16384
+  modelPhotRepStar1:
+    requestMemory: 16384
+  modelPhotRepStar2:
+    requestMemory: 16384
+  modelPhotRepStar3:
+    requestMemory: 16384
+  modelPhotRepStar4:
+    requestMemory: 16384
+  psfPhotRepStar1:
+    requestMemory: 16384
+  psfPhotRepStar2:
+    requestMemory: 16384
+  psfPhotRepStar3:
+    requestMemory: 16384
+  psfPhotRepStar4:
+    requestMemory: 16384
+# step 4
+  forcedPhotCcd:
+    requestMemory: 4096
+  forcedPhotDiffim:
+    requestMemory: 4096
+  getTemplate:
+    requestMemory: 4096
+  imageDifference:
+    requestMemory: 6144
+  transformDiaSourceCat:
+    requestMemory: 2048
+  writeForcedSourceTable:
+    requestMemory: 2048
+# step 5
+  drpAssociation:
+    requestMemory: 2048
+  drpDiaCalculation:
+    requestMemory: 2048
+  forcedPhotCcdOnDiaObjects:
+    requestMemory: 2048
+  forcedPhotDiffOnDiaObjects:
+    requestMemory: 2048
+  transformForcedSourceTable:
+    requestMemory: 12288
+  consolidateForcedSourceTable:
+    requestMemory: 360000
+  consolidateAssocDiaSourceTable:
+    requestMemory: 2048
+  consolidateFullDiaObjectTable:
+    requestMemory: 2048
+  writeForcedSourceOnDiaObjectTable:
+    requestMemory: 2048
+  transformForcedSourceOnDiaObjectTable:
+    requestMemory: 4096
+  consolidateForcedSourceOnDiaObjectTable:
+    requestMemory: 65536
+  TE1:
+    requestMemory: 49152
+  TE2:
+    requestMemory: 49152
+  wPerp:
+    requestMemory: 240000
+# step 6
+  consolidateDiaSourceTable:
+    requestMemory: 2048
+# step 7
+  makeCcdVisitTable:
+    requestMemory: 2048
+  makeVisitTable:
+    requestMemory: 2048
+  consolidateHealSparsePropertyMaps:    
+    requestMemory: 2048
