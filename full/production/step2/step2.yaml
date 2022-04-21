@@ -24,7 +24,7 @@ payload:
   output: "{payloadName}/{campaign}"
   butlerConfig: /sps/lsst/dataproducts/rubin/previews/dp0.2/butler.yaml
   inCollection: "2.2i/defaults","2.2i/runs/FRDF/DP0.2/PREOPS-1145/step1"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and exposure >=LOWEXP and exposure <= HIGHEXP"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and visit >=LOWEXP and visit <= HIGHEXP"
 
 # Needed for Parsl plugin
 executionButler:
