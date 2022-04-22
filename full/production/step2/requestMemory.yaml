@@ -15,15 +15,17 @@ pipetask:
     requestMemory: 4096
 # step 2
   consolidateSourceTable:
-    requestMemory: 2048
+#    requestMemory: 2048
+    requestMemory: 4096
   consolidateVisitSummary:
-    requestMemory: 2048
+#    requestMemory: 2048
+    requestMemory: 4096
   nsrcMeasVisit:
-    requestMemory: 2048
+    requestMemory: 4096
   TE3:
-    requestMemory: 2048
+    requestMemory: 4096
   TE4:
-    requestMemory: 2048
+    requestMemory: 4096
 # step 3
   makeWarp:
     requestMemory: 4096
