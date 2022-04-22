@@ -23,7 +23,7 @@ payload:
   payloadName: 2.2i/runs/FRDF/DP0.2
   output: "{payloadName}/{campaign}"
   butlerConfig: /sps/lsst/dataproducts/rubin/previews/dp0.2/butler.yaml
-  inCollection: "2.2i/defaults","2.2i/runs/FRDF/DP0.2/PREOPS-1145/step1"
+  inCollection: "2.2i/defaults,2.2i/runs/FRDF/DP0.2/PREOPS-1145/step1"
   dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and visit >=954400 and visit <= 1040758"
 
 # Needed for Parsl plugin
