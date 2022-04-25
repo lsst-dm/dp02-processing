@@ -1,0 +1,8 @@
+sleep 0.7h
+for i in {21..30}
+do
+  echo "Submitting step4 group $i"
+  bps submit step4_all_$i.yaml 2>&1 | tee step4_all_$i.log
+  prodstat update-issue step4_all_$i.yaml PREOPS-905 DRP0
+  sleep 4h
+done
