@@ -10,7 +10,7 @@ runQuantumCommand: "pipetask {runPreCmdOpts} run -b {butlerConfig} -i {inCollect
 pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step2"
 
 project: dp02
-campaign: PREOPS-1145/step2_4
+campaign: PREOPS-1145/step2_new_4
 submitPath: "${DP02_DIR}/submit/{outputRun}"
 computeSite: ccin2p3
 requestMemory: 3072
