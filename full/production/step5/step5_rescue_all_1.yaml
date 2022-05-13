@@ -5,7 +5,7 @@ includeConfigs:
 
 project: dp02
 campaign: v23_0_2/PREOPS-905/step5_1
-pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step5"
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#transformForcedSourceTable"
 
 payload:
   payloadName: 2.2i/runs/DP0.2
@@ -17,3 +17,7 @@ payload:
 
 saveClusteredQgraph: True
 saveGenericWorkflow: True
+
+maxJobsPerTask: 30000
+
+extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/DP0.2/v23_0_2/PREOPS-905/step5_1"
