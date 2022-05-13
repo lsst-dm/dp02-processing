@@ -4,7 +4,7 @@ includeConfigs:
 - clustering_step6.yaml
 
 project: dp02
-campaign: v23_0_2/PREOPS-905/step6_GNUM
+campaign: v23_0_2/PREOPS-905/step6_3
 pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step6"
 
 payload:
@@ -12,7 +12,7 @@ payload:
   output: "{payloadName}/{campaign}"
   butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external-cache-600.yaml
   inCollection: "2.2i/runs/DP0.2/v23_0_2/PREOPS-905/step5"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and visit>=LOWEXP and visit<=HIGHEXP"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and visit>=213509 and visit<=262007"
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_2_rc3"
 
 saveClusteredQgraph: True
