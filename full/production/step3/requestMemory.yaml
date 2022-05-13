@@ -28,7 +28,7 @@ pipetask:
     requestMemory: 4096
 # step 3
   makeWarp:
-    requestMemory: 4096
+    requestMemory: 8192
   assembleCoadd:
     requestMemory: 4096
   detection:
