@@ -26,18 +26,6 @@ tasks:
         config:
             multibandDeblend.maxNumberOfPeaks: 200
             multibandDeblend.maxFootprintArea: 100000
-#    deblend:
-#        class: lsst.meas.extensions.scarlet.scarletDeblendTask
-#        class: lsst.pipe.tasks.deblendCoaddSourcesPipeline.DeblendCoaddSourcesMultiTask
-#        config:
-#            maxNumberOfPeaks: 200
-#            maxFootprintArea: 100000
-#            config.maxNumberOfPeaks: 200
-#            config.maxFootprintArea: 100000
-#        class: lsst.meas.deblender.sourceDeblendTask
-#        config:
-#            maxNumberOfPeaks: 200
-#            maxFootprintArea: 100000
     measure:
         class: lsst.pipe.tasks.multiBand.MeasureMergedCoaddSourcesTask
         config:
