@@ -36,7 +36,7 @@ pipetask:
   mergeDetections:
     requestMemory: 2048
   deblend:
-    requestMemory: 49152
+    requestMemory: 24576
   measure:
     requestMemory: 12288
   mergeMeasurements:
@@ -62,7 +62,7 @@ pipetask:
   matchCatalogsPatch:
     requestMemory: 16384
   matchCatalogsPatchMultiBand:
-    requestMemory: 51200
+    requestMemory: 61440
   PA1:
     requestMemory: 16384
   PF1_design:
