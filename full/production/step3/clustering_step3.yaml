@@ -1,8 +1,11 @@
 clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
 cluster:
-#    patch_step3_makewarp:
-#        pipetasks: makeWarp
-#        dimensions: patch,band
+    patch_step3_makewarp:
+        pipetasks: makeWarp
+        dimensions: tract,patch,band
+    patch_step3_selectgoodseeingvisits:
+        pipetasks: selectGoodSeeingVisits
+        dimensions: tract,band
     patch_step3_coaddition:
         pipetasks: assembleCoadd,templateGen,detection
         dimensions: tract,patch,band
