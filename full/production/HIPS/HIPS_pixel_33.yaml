@@ -1,0 +1,22 @@
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_idf.yaml
+
+project: dp02
+campaign: w_2022_22/PREOPS-1209
+qgraphFile: HIPS_pixel_33.qgraph
+
+payload:
+  payloadName: 2.2i/runs/DP0.2
+  output: "{payloadName}/{campaign}"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external-cache-600.yaml
+  inCollection: "2.2i/runs/DP0.2/v23_0_2/PREOPS-905/step_all"
+#  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2'"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2022_22"
+
+saveClusteredQgraph: True
+saveGenericWorkflow: True
+
+maxJobsPerTask: 30000
+
+#executionButler:
+#    whenCreate: "ACQUIRE"
