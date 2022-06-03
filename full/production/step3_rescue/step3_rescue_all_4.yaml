@@ -1,0 +1,34 @@
+wmsServiceClass: desc.gen3_workflow.ParslService
+parslConfig: desc.gen3_workflow.config.slurm_config
+
+# Run in Singularity containers
+commandPrepend: $DP02_ENV/dp02-tools/wrapper_singularity.sh
+
+# CTRL_MPEXEC_DIR variable removed because of Singularity wrapper
+runQuantumCommand: "pipetask {runPreCmdOpts} run -b {butlerConfig} -i {inCollection} -o {output} --output-run {outputRun} --qgraph {qgraphFile} --qgraph-id {qgraphId} --qgraph-node-id {qgraphNodeId} --clobber-outputs --skip-init-writes --extend-run {extraRunQuantumOptions}"
+
+pipelineYaml: "/pbs/throng/lsst/software/parsl/dp02-processing/full/production/step3/DRP_step3.yaml#step3"
+
+project: dp02
+campaign: PREOPS-1145/step3_4
+submitPath: "${DP02_DIR}/submit/{outputRun}"
+computeSite: ccin2p3
+requestMemory: 3072
+requestCpus: 1
+
+includeConfigs:
+  - requestMemory.yaml
+  - clustering_step3.yaml
+
+payload:
+  payloadName: 2.2i/runs/FRDF/DP0.2
+  output: "{payloadName}/{campaign}"
+  butlerConfig: /sps/lsst/dataproducts/rubin/previews/dp0.2/butler.yaml
+  inCollection: "2.2i/defaults,2.2i/runs/FRDF/DP0.2/PREOPS-1145/step1,2.2i/runs/FRDF/DP0.2/PREOPS-1145/step2"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=3077 and tract<=3081"
+
+# Needed for Parsl plugin
+executionButler:
+  whenCreate: "PREPARE"
+
+extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/FRDF/DP0.2/PREOPS-1145/step3_4"
