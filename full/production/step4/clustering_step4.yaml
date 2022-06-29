@@ -1,0 +1,6 @@
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
+cluster:
+    diffim_forced_phot:
+        pipetasks: getTemplate,imageDifference,transformDiaSourceCat,forcedPhotCcd,forcedPhotDiffim,writeForcedSourceTable
+        dimensions: visit,detector
+        request_memory: 6144
