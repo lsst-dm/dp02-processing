@@ -1,0 +1,20 @@
+includeConfigs:
+- ${CTRL_BPS_DIR}/config/bps_idf.yaml
+- requestMemory_step3.yaml
+- clustering_step3.yaml
+
+project: dp02
+campaign: v23_0_1/PREOPS-905/step3_32
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#makeWarp,assembleCoadd,detection,mergeDetections,deblend,measure,mergeMeasurements,forcedPhotCoadd,transformObjectTable,writeObjectTable,consolidateObjectTable,matchCatalogsTract,matchCatalogsPatch,matchCatalogsPatchMultiBand,PA1,PF1_design,AM1,AM2,AM3,AD1_design,AD2_design,AD3_design,AF1_design,AF2_design,AF3_design,AB1,modelPhotRepGal1,modelPhotRepGal2,modelPhotRepGal3,modelPhotRepGal4,modelPhotRepStar1,modelPhotRepStar2,modelPhotRepStar3,modelPhotRepStar4,psfPhotRepStar1,psfPhotRepStar2,psfPhotRepStar3,psfPhotRepStar4"
+
+payload:
+  payloadName: 2.2i/runs/DP0.2
+  output: "{payloadName}/{campaign}"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external-cache-600.yaml
+  inCollection: "2.2i/runs/DP0.2/v23_0_0_rc5/PREOPS-905"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and ((tract>=4848 and tract<=4849) or (tract>=5062 and tract<=5064))"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_1_rc4"
+
+saveClusteredQgraph: True
+saveGenericWorkflow: True
+
