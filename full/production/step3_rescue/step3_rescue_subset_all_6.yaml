@@ -4,18 +4,18 @@ includeConfigs:
 - clustering_step3_rescue.yaml
 
 project: dp02
-campaign: v23_0_1/PREOPS-905/step3_10
-pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step3"
+campaign: v23_0_1/PREOPS-905/step3_6
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#detection,mergeDetections,deblend,measure,mergeMeasurements,forcedPhotCoadd,transformObjectTable,writeObjectTable,consolidateObjectTable,matchObjectToTruth"
 
 payload:
   payloadName: 2.2i/runs/DP0.2
   output: "{payloadName}/{campaign}"
   butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external-cache-600.yaml
   inCollection: "2.2i/runs/DP0.2/v23_0_0_rc5/PREOPS-905"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=3448 and tract<=3452"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=3256 and tract<=3260"
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_1_rc4"
 
 saveClusteredQgraph: True
 saveGenericWorkflow: True
 
-extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_10"
+extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_6"

@@ -1,10 +1,10 @@
 includeConfigs:
 - ${CTRL_BPS_DIR}/config/bps_idf.yaml
-- requestMemory_step3_rescue.yaml
-- clustering_step3_rescue.yaml
+- requestMemory_step3.yaml
+- clustering_step3.yaml
 
 project: dp02
-campaign: v23_0_1/PREOPS-905/step3_10
+campaign: v23_0_1/PREOPS-905/step3_19
 pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step3"
 
 payload:
@@ -12,10 +12,12 @@ payload:
   output: "{payloadName}/{campaign}"
   butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external-cache-600.yaml
   inCollection: "2.2i/runs/DP0.2/v23_0_0_rc5/PREOPS-905"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=3448 and tract<=3452"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract>=4034 and tract<=4226"
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-v23_0_1_rc4"
 
 saveClusteredQgraph: True
 saveGenericWorkflow: True
 
-extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_10"
+extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/DP0.2/v23_0_1/PREOPS-905/step3_19"
+
+numberOfRetries: 1

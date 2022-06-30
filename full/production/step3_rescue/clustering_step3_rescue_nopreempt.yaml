@@ -1,0 +1,42 @@
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
+cluster:
+    visit_detector_1:
+        pipetasks: isr,characterizeImage,calibrate,writeSourceTable,transformSourceTable
+        dimensions: visit,detector
+        equalDimensions: visit:exposure
+    visit_step2_1:
+        pipetasks: consolidateSourceTable,consolidateVisitSummary,nsrcMeasVisit,TE3,TE4
+        dimensions: visit
+    patch_coaddition:
+        pipetasks: assembleCoadd,templateGen,detection
+        dimensions: tract,patch,band
+        request_memory: 16384
+    patch_detect_deblend:
+        pipetasks: mergeDetections,deblend
+        dimensions: tract,patch
+        request_memory: 32768
+        queue: DOMA_LSST_GOOGLE_TEST_EXTRA_HIMEM_NON_PREEMPT
+    patch_postprocess:
+        pipetasks: writeObjectTable,transformObjectTable
+        dimensions: tract,patch
+        request_memory: 16384
+    faro_step3:
+        pipetasks: PA1,PF1_design,AM1,AM2,AM3,AD1_design,AD2_design,AD3_design,AF1_design,AF2_design,AF3_design,modelPhotRepGal1,modelPhotRepGal2,modelPhotRepGal3,modelPhotRepGal4,modelPhotRepStar1,modelPhotRepStar2,modelPhotRepStar3,modelPhotRepStar4,psfPhotRepStar1,psfPhotRepStar2,psfPhotRepStar3,psfPhotRepStar4
+        dimensions: tract,band
+        request_memory: 4096
+    diffim:
+        pipetasks: getTemplate,imageDifference,transformDiaSourceCat
+        dimensions: visit,detector,skymap
+    association:
+        pipetasks: drpAssociation,drpDiaCalculation
+        dimensions: tract,patch
+    forced_phot_detector:
+        # All of these tasks _can_ be run together, but forcedPhotCcd (and to
+        # a lesser extent, forcedPhotDiffim and writeForcedSourceTable) may be
+        # unblocked much earlier; operators may want to split this cluster up
+        # on that basis.
+        pipetasks: forcedPhotCcd,forcedPhotDiffim,forcedPhotDiffOnDiaObjects,forcedPhotCcdOnDiaObjects,writeForcedSourceTable
+        dimensions: tract,visit,detector
+    property_maps:
+        pipetasks: healSparsePropertyMaps
+        dimensions: tract,band
