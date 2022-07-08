@@ -1,0 +1,22 @@
+imports:
+  - $DRP_PIPE_DIR/ingredients/LSSTCam-imSim/DRP.yaml
+  - $ANALYSIS_DRP_DIR/pipelines/LSSTCam-imSim/analysis_drp_plots.yaml
+
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_idf.yaml
+- requestMemory_step3.yaml
+- clustering_step3.yaml
+
+project: dp02
+campaign: w_2022_27/PREOPS-1248
+pipelineYaml: "${DRP_PIPE_DIR}/ingredients/LSSTCam-imSim/DRP.yaml#step3"
+
+payload:
+  payloadName: 2.2i/runs/test-med-1
+  output: "{payloadName}/{campaign}"
+  butlerConfig: s3://butler-us-central1-panda-dev/dc2/butler-external-cache-600.yaml
+  inCollection: "2.2i/defaults/test-med-1"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract in (3828, 3829)"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2022_27"
+
+extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/test-med-1/w_2022_27/PREOPS-1248"
