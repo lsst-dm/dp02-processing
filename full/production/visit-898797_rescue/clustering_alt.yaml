@@ -1,0 +1,5 @@
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
+cluster:
+    visit_step1:
+        pipetasks: isr,characterizeImage,calibrate,writeSourceTable,transformSourceTable
+        dimensions: detector
