@@ -1,0 +1,44 @@
+pipetask:
+  makeWarp:
+    requestMemory: 8192
+  assembleCoadd:
+    requestMemory: 16384
+  deblend:
+    requestMemory: 16384
+  measure:
+    requestMemory: 16384
+  mergeMeasurements:
+    requestMemory: 16384
+  forcedPhotCoadd: 
+    requestMemory: 4096
+  writeObjectTable:
+    requestMemory: 16384
+  matchCatalogsPatch:
+    requestMemory: 4096
+  modelPhotRepGal4:
+    requestMemory: 4096
+  imageDifference:
+    requestMemory: 4096
+  matchCatalogsPatchMultiBand:
+    requestMemory: 120000
+  matchCatalogsTract:
+    requestMemory: 120000
+  wPerp:
+    requestMemory: 120000
+  TE1:
+    requestMemory: 46000
+  TE2:
+    requestMemory: 46000
+  consolidateObjectTable:
+    requestMemory: 4096
+  consolidateForcedSourceTable:
+    requestMemory: 120000
+  consolidateForcedSourceOnDiaObjectTable:
+    requestMemory: 18000
+  matchCatalogsTractMag17to21p5:
+    requestMemory: 16384
+  matchCatalogsTractStarsSNR5to80:
+    requestMemory: 16384
+  matchCatalogsTractGxsSNR5to80:
+    requestMemory: 16384
+    queue: DOMA_LSST_GOOGLE_TEST_EXTRA_HIMEM
