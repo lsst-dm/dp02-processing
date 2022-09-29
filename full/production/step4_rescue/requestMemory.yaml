@@ -114,7 +114,8 @@ pipetask:
   getTemplate:
     requestMemory: 4096
   imageDifference:
-    requestMemory: 6144
+#    requestMemory: 6144
+    requestMemory: 12288
   transformDiaSourceCat:
     requestMemory: 2048
   writeForcedSourceTable:

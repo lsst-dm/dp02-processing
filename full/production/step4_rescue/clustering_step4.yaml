@@ -3,4 +3,4 @@ cluster:
     diffim_forced_phot:
         pipetasks: getTemplate,imageDifference,transformDiaSourceCat,forcedPhotCcd,forcedPhotDiffim,writeForcedSourceTable
         dimensions: visit,detector
-        request_memory: 6144
+        request_memory: 12288
