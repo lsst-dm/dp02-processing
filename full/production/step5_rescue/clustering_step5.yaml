@@ -1,0 +1,8 @@
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
+cluster:
+    association:
+        pipetasks: drpAssociation,drpDiaCalculation
+        dimensions: tract,patch
+    forced_phot_step5:
+        pipetasks: forcedPhotDiffOnDiaObjects,forcedPhotCcdOnDiaObjects,writeForcedSourceOnDiaObjectTable
+        dimensions: visit,detector
