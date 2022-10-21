@@ -7,8 +7,8 @@ commandPrepend: $DP02_ENV/dp02-tools/wrapper_singularity_v23.0.2.sh
 # CTRL_MPEXEC_DIR variable removed because of Singularity wrapper
 runQuantumCommand: "pipetask {runPreCmdOpts} run -b {butlerConfig} -i {inCollection} -o {output} --output-run {outputRun} --qgraph {qgraphFile} --qgraph-id {qgraphId} --qgraph-node-id {qgraphNodeId} --clobber-outputs --skip-init-writes --extend-run {extraRunQuantumOptions}"
 
-#pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step5"
-qgraphFile: /sps/lsst/users/lsstprod/DP02/submit/2.2i/runs/FRDF/DP0.2/PREOPS-1145/step5_4/20221004T121547Z/2.2i_runs_FRDF_DP0.2_PREOPS-1145_step5_4_20221004T121547Z.qgraph 
+pipelineYaml: "${OBS_LSST_DIR}/pipelines/imsim/DRP.yaml#step5"
+#qgraphFile: /sps/lsst/users/lsstprod/DP02/submit/2.2i/runs/FRDF/DP0.2/PREOPS-1145/step5_4/20221004T121547Z/2.2i_runs_FRDF_DP0.2_PREOPS-1145_step5_4_20221004T121547Z.qgraph 
 
 project: dp02
 campaign: PREOPS-1145/step5_4
@@ -33,4 +33,4 @@ executionButler:
   whenCreate: "PREPARE"
 
 extraQgraphOptions: "--clobber-outputs --skip-existing-in 2.2i/runs/FRDF/DP0.2/PREOPS-1145/step5_4"
-saveGenericWorkflow: True
+#saveGenericWorkflow: True
